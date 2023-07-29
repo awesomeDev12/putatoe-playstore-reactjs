@@ -3,16 +3,10 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 
 
-const Image = (props)=>{
-    return (
-        <img src={props.url} height="300px" />
-    )
-
-}
 
 const Screenshots = ()=> {
 
-    const urls = [
+    const [urls,setUrls] = useState([
 
            "https://play-lh.googleusercontent.com/2xJ7i0pEjX70yyINPDPKnL5b2U2VrP1XlvvwBbojcjjkmc7PKrII02fXcHcL50kXkw=w1052-h592",
       
@@ -23,25 +17,45 @@ const Screenshots = ()=> {
             "https://play-lh.googleusercontent.com/ThFVJhYou5EeYpM4Zfn4A-yKIUiyftT4gYhClEow4MgLxH9nogx8tEZo13pcQaLaG84=w1052-h592",
     
             "https://play-lh.googleusercontent.com/hLnXg63bqq1mkLtKmqbQCNXapr4xsvZmmwDuusXYLdnXvaZCCn0YxQ4M0OBVI30r10Mw=w1052-h592",
-    ]
+    ])
 
     
     const rightBtnClick = ()=> {
-       
+        const firstItem = urls[0]
+        let newUrls = []
+        for(let i =1;i<urls.length;i++){
+            newUrls.push(urls[i])
+        }
+        newUrls.push(firstItem)
+        setUrls(newUrls)
     }
 
     const leftBtnClick = ()=> {
-        console.log()
+        const lastItem = urls[urls.length-1]
+        let newUrls = [lastItem]
+        for(let i=0;i<urls.length-1;i++){
+            newUrls.push(urls[i])
+        }
+
+        setUrls(newUrls)
     }
 
 
     return (
         <>
         <div className="screenshots" >
-            
+            <div className="image-slider-container">
+            {
+                urls.map((url)=>{
+                    return (
+                        <img key={nanoid()} src={url} />
+                    )
+                })
+            }
+            </div>
 
-            <div onClick={leftBtnClick} className="left-arrow"> &lt; </div>
-            <div onClick={rightBtnClick} className="right-arrow"> &gt; </div>
+            <div onClick={leftBtnClick} className="arrow left-arrow"> &lt; </div>
+            <div onClick={rightBtnClick} className="arrow right-arrow"> &gt; </div>
         </div>
 
             

@@ -5,6 +5,11 @@
 
 }
 
+a {
+    color:inherit;
+    /* text-decoration: none; */
+}
+
 .topbar {
     position: fixed;
     top: 0;
@@ -91,6 +96,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .header .btn-install:hover {
@@ -110,6 +116,7 @@
     margin-top: 5px;
     margin-left: 20px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .header .btn-wishlist:hover {
@@ -156,45 +163,42 @@
     box-shadow: 0px 0px 5px #ddd;
 }
 
-.screenshots .slide {
-    border-radius: 10px;
-    margin-left: 7px;
-    margin-right: 7px;
+.screenshots .arrow {
+    position: absolute;
+    
+    top: 40%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5em;
+    font-weight: 600;
+
+    user-select: none;
 }
 
 .screenshots .left-arrow {
-    position: absolute;
     left:-30px;
-    top: 40%;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.5em;
-    font-weight: 600;
 }
-
 .screenshots .right-arrow {
-    position: absolute;
     right: -30px;
-    top: 40%;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.5em;
-    font-weight: 600;
 }
+
+
+.image-slider-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 10px;
+    overflow: hidden;
+}
+
 
 .about-app{
     padding-right: 10px;
@@ -235,11 +239,45 @@
     color: var(--description-color);
 }
 
-.data-safety .widget {
+.data-safety .widget-container {
     width: 850px;
-    height: 250px;
-    border-radius: 5px;
-    border: 1px grey solid;
+    /* height: 250px; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #ccc;
+    padding: 20px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+;
+    
+
+}
+.data-safety .widget-container .widget {
+    display: flex;
 }
 
+.data-safety .widget-container .icon {
+    width: 20px;
+    height: 20px;
+    color: grey;
+}
 
+.data-safety .widget-container .text{
+    margin-left: 20px;
+   color: var(--description-color);
+
+}
+
+.data-safety .widget-container .text .second-line{
+    font-size: 0.8em;
+}
+
+.ratings-and-reviews {
+    margin-top: 20px;
+}
+.footer {
+    margin-top: 20px;
+    height: 300px;
+    width: 100vw;
+    box-shadow: 0px 0px 10px #ccc;
+}

@@ -5,7 +5,9 @@ const TopBar = ()=> {
   return (
     <>
         <div className="topbar">
+            <a href="https://play.google.com/store/games">
             <img src={gps} className="googleplaystore-topbar-icon"/>
+            </a>
 
             <div className="options">
               <div className="option-item">
@@ -29,7 +31,7 @@ const TopBar = ()=> {
             </div>
 
             <div className="topbar-right">
-              Hello
+              
             </div>
             <div>h</div>
         
