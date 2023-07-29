@@ -1,5 +1,7 @@
 
-body {
+:root {
+    --topbar-height: 65px;
+    --description-color: #707070;
 
 }
 
@@ -7,9 +9,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 65px;
+    height: var(--topbar-height);
     width: 100vw;
-    z-index: 10;
+    z-index: 100;
+    opacity: 1;
     border: 1px solid black;
     display:flex;
     align-items: center;
@@ -22,7 +25,7 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     margin-left: 40px;
 
 }
@@ -46,3 +49,132 @@ body {
     height: 40px;
     width: 165px;
 }
+
+
+.topbar-right {
+    color : green;
+    flex-grow: 1;
+}
+
+
+.main-container {
+    margin-top: var(--topbar-height);
+    margin-left: 100px;
+    padding-top: 70px;
+    width:850px;
+}
+
+.header .title{
+    font-family: sans-serif;
+    font-size:3.75em;
+    font-weight: 600;
+}
+
+.header .title-description {
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.header .install-wishlist {
+    display: flex;
+}
+.header .btn-install {
+    width: 200px;
+    height: 40px;
+   background-color: #099970;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .btn-install:hover {
+    cursor: pointer;
+    background: #066348;
+}
+
+.header .btn-wishlist {
+    color:green;
+    font-weight:500;
+    font-size: 1em;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.header .btn-wishlist:hover {
+    cursor: pointer;
+    background: #f0f0fdff;
+
+}
+
+.header-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-icon {
+    width: 115px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.header-icon-top {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.header-icon-bottom {
+    font-size: 0.75em;
+    color: #707070;
+}
+
+.header-icon .fa-star{
+    font-size: 0.75em;
+}
+
+.screenshots {
+    width: 850px;
+    height: 300px;
+    border: 1px black solid;
+}
+
+
+.about-app{
+    padding-right: 10px;
+}
+
+.about-app .title {
+    font-size: 1.3em;
+    font-weight: 500;
+
+}
+
+.about-app .description {
+    font-size: 0.9em;
+    color: var(--description-color);
+}
+
+.about-app .updated-title {
+    font-size:  1em;
+}
+
+.about-app .updated-date {
+    font-size: 0.9em;
+    color: var(--description-color);
+}
+

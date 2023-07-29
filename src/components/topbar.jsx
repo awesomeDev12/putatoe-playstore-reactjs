@@ -27,6 +27,11 @@ const TopBar = ()=> {
                 Kids
               </div>
             </div>
+
+            <div className="topbar-right">
+              Hello
+            </div>
+            <div>h</div>
         
         </div>
 
