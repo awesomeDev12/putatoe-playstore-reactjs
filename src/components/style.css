@@ -11,14 +11,15 @@
     left: 0;
     height: var(--topbar-height);
     width: 100vw;
-    z-index: 100;
+    background: white;
+    z-index: 10;
     opacity: 1;
-    border: 1px solid black;
     display:flex;
     align-items: center;
     justify-items: center;
     padding-left: 25px;
     /* padding-top: 15px; */
+    box-shadow: 0px 0px 10px #bbb;
 }
 
 .topbar .options {
@@ -60,7 +61,7 @@
 .main-container {
     margin-top: var(--topbar-height);
     margin-left: 100px;
-    padding-top: 70px;
+    padding-top: 50px;
     width:850px;
 }
 
@@ -72,7 +73,7 @@
 
 .header .title-description {
     margin-top: 10px;
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: 15px;
     font-weight: 500;
 }
@@ -148,17 +149,59 @@
 }
 
 .screenshots {
+    position: relative;
+    margin-top: 20px;
     width: 850px;
     height: 300px;
-    border: 1px black solid;
+    box-shadow: 0px 0px 5px #ddd;
 }
 
+.screenshots .slide {
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.screenshots .left-arrow {
+    position: absolute;
+    left:-30px;
+    top: 40%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.screenshots .right-arrow {
+    position: absolute;
+    right: -30px;
+    top: 40%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5em;
+    font-weight: 600;
+}
 
 .about-app{
     padding-right: 10px;
 }
 
 .about-app .title {
+    margin-top: 20px;
     font-size: 1.3em;
     font-weight: 500;
 
@@ -177,4 +220,26 @@
     font-size: 0.9em;
     color: var(--description-color);
 }
+
+.data-safety{
+    margin-top: 20px;
+}
+.data-safety .title{
+    font-size: 1.3em;
+    font-weight: 500;
+
+}
+
+.data-safety .description {
+    font-size: 0.9em;
+    color: var(--description-color);
+}
+
+.data-safety .widget {
+    width: 850px;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px grey solid;
+}
+
 
